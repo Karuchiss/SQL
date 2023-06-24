@@ -1,0 +1,26 @@
+--Create a grocery store database
+
+CREATE TABLE karuchiss_store (id INTEGER PRIMARY KEY, name TEXT, size TEXT, price INTEGER, quantity INTEGER);
+
+INSERT INTO karuchiss_store VALUES (1,"brown sweater","large",15,5);
+INSERT INTO karuchiss_store VALUES (2,"White top","Medium",16,5);
+INSERT INTO karuchiss_store VALUES (3,"Blue Jeans","Xlarge",25,10);
+INSERT INTO karuchiss_store VALUES (4,"Black Jeans","Xlarge",25,10);
+INSERT INTO karuchiss_store VALUES (5,"Blue Jeans","Medium",25,10);
+INSERT INTO karuchiss_store VALUES (6,"Blue Jeans","small",25,10);
+INSERT INTO karuchiss_store VALUES (7,"Black Jeans","Medium",25,10);
+INSERT INTO karuchiss_store VALUES (8,"Pink top","small",10,10);
+INSERT INTO karuchiss_store VALUES (9,"Red top","small",10,10);
+INSERT INTO karuchiss_store VALUES (10,"Black top","Xlarge",10,10);
+INSERT INTO Karuchiss_store VALUES (11,"Black top","Medium",10,10);
+INSERT INTO karuchiss_store VALUES (12,"Black top","small",10,10);
+INSERT INTO karuchiss_store VALUES (13,"White top","Xlarge",10,10);
+INSERT INTO karuchiss_store VALUES (14,"White top","small",10,10);
+INSERT INTO karuchiss_store VALUES (15,"Black Boots","large",2,25);
+
+--display the database ordered by price.
+SELECT * FROM karuchiss_store
+ORDER BY "price";
+
+--display the database group by size and size quantity
+SELECT "size",SUM("quantity") FROM karuchiss_store GROUP BY "size";
